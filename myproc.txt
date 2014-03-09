@@ -1,0 +1,31 @@
+- memo
+https://gist.github.com/tcnksm/7700047
+
+LXC
+AUFS
+
+docker run コンテナを作成する.
+docker stop コンテナを停止する.
+docker start コンテナを起動する.
+docker restart コンテナを再起動する.
+docker attach 起動中のコンテナに接続する．
+docker rm コンテナを破棄する(コンテナを停止する必要がある)
+docker wait コンテナが停止するまでブロックする.
+
+イメージの環境変数を取得する
+
+docker run -rm ubuntu env 
+古いコンテナを一気に削除する
+
+docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm
+停止中のコンテナを一気に削除する
+
+docker rm `docker ps -a -q`
+
+- source
+http://www.publickey1.jp/blog/13/dotclouddockerdocker.html
+http://www.infoq.com/jp/news/2013/11/dotcloud-renamed-docker
+
+
+
+docker build -t apache .
