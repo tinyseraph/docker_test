@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>doocker's intro</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -43,24 +43,106 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
+					<h1>Docker</h1>
+					<h3>使ってみたので報告したい</h3>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>by ya-ota</small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Heads Up</h2>
+					<h1>持って帰るといいかもしれないキーワード</h1>
 					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
+                                        <ol>
+                                                <li class="fragment"><code>docker</code></li>
+                                                <li class="fragment"><code>immutable infrastracuture</code></li>
+                                                <li class="fragment"><code>LXC</code></li>
+                                                <li class="fragment"><code>OS仮想化</code></li>
+                                                <li class="fragment"><code>cgroups</code></li>
+                                        </ol>
+					</p>
+				</section>
+
+
+
+				<section>
+					<section>
+						<h2>Dockerってなに?</h2>
+						<p>
+                                        コンテナ技術を使った環境構築の一つです。<br>
+                                        類似システム, jail(freebsd) zones(solaris)<br>
+                                        戦うのは、環境系のプラットフォーム。<br>
+						</p>
+					</section>
+					<section>
+						<h2>Dockerってなに?</h2>
+						<p>
+                                        OS仮想化というものらしい!
+                                        VM上で複数のOSをうごかせます。（v0.8からはjail,zoneも使える)<br>
+                                        SaaSプラットフォーム heroku のようなものを自前で管理できると思ってもらうと近いと思います。<br>
+					</section>
+					<section>
+						<h2>Dockerってなに?</h2>
+					<p>
+                                        今日はその導入部分と主要技術の要素をご紹介します。<br>
+                                        ＃すいません、資料が間に合わなかったです。
+					</p>
+					</section>
+				</section>
+
+				<section>
+                                    <h2>何故Dockerを使うべきか</h2>
+					<p>
+                                        URL：https://gist.github.com/tcnksm/7700047
+					</p>
+					<blockquote>
+						&ldquo;Dockerが面白いのはシンプルな環境に隔離性と再現性をもたらしてくれることだ．ランタイムの環境を一度作れば、パッケージにして別のマシンでも再利用することできる．さらに，すべてはホスト内の隔離された環境で行われる（VMのように）．最も素晴らしい点は，シンプルかつ高速であることだ．&rdquo;
+					</blockquote>
+				</section>
+
+				<section>
+					<h2>実演</h2>
+					<p>
 					</p>
 
 					<aside class="notes">
 						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 					</aside>
 				</section>
+
+				<section>
+					<h2>構造</h2>
+					<p>
+                                        https://github-camo.global.ssl.fastly.net/c5e8d48a703bc3ba031b212142d0d3ba2d03e35a/687474703a2f2f646f636b65722e72656164746865646f63732e6f72672f656e2f6c61746573742f5f696d616765732f646f636b65722d66696c6573797374656d732d62757379626f7872772e706e67
+                                        <img width="320" height="299" src="https://github-camo.global.ssl.fastly.net/c5e8d48a703bc3ba031b212142d0d3ba2d03e35a/687474703a2f2f646f636b65722e72656164746865646f63732e6f72672f656e2f6c61746573742f5f696d616765732f646f636b65722d66696c6573797374656d732d62757379626f7872772e706e67" alt="structure">
+					</p>
+                                        <ol>
+                                                <li class="fragment"><code>カーネルは共有</code></li>
+                                                <li class="fragment"><code>ディストリビューションがその上で動作する</code></li>
+                                                <li class="fragment"><code>コンテナとVMの関係は、スレッドとプロセスの関係に近い</code></li>
+                                        </ol>
+
+
+
+				</section>
+
+				<section>
+                                    <h2>何故Dockerを使うべきか</h2>
+                                        <ol>
+                                                <li class="fragment"><code>Immutable Infrastracture</code></li>
+                                                <li class="fragment"><code>つまり、使い捨て</code></li>
+                                        </ol>
+				</section>
+
+				<section>
+                                <h2>MFでいいことあるかな? </h2>
+                                        <ol>
+                                                <li class="fragment"><code>...</code></li>
+                                        </ol>
+				</section>
+
+
+
 
 				<!-- Example of nested vertical slides -->
 				<section>

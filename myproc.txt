@@ -29,3 +29,25 @@ http://www.infoq.com/jp/news/2013/11/dotcloud-renamed-docker
 
 
 docker build -t apache .
+
+
+
+docker run -i -t apache /bin/bash
+このコマンドは新規コンテナーを作成し、それにユニークな ID を付与し、IP
+アドレスを割り当て、ネットワーク設定を行います。
+
+
+新規コンテナーの中から、すべての従属ソフトウェアをインストールした最新のコンテナーを見つけます。それに対して
+docker commit
+コマンドを実行することにより、新しいスナップショットまたはイメージのコミットが可能です:
+
+
+sudo docker run -i -t -p :80 apache /bin/bash
+apt-get install vim
+docker commit 8e07a84ea97a yaota/apache
+
+sudo docker run -i -t -p :80 apache /bin/bash
+sudo docker run -i -t -p :80 yaota/apache /bin/bash
+
+
+

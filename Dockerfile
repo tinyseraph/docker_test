@@ -16,7 +16,6 @@ ENV APACHE_LOCK_DIR /var/lock/apache2
 ADD ./htdocs /var/www
 
 EXPOSE 80
-
 CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
 
 
